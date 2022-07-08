@@ -24,6 +24,7 @@ const find_minimum_depth = function (root) {
     const queueLength = queue.length 
     for (let i = 0; i < queueLength; i++)
     {
+      //const current = queue.shift()
       current = queue.shift()
       //if the current node is the leaf node increment the depth, return the depth
       if (!current.left && !current.right) {

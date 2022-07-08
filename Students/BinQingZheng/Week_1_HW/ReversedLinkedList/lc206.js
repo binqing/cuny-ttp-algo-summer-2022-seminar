@@ -27,13 +27,13 @@ class Node {
     let current = head, 
         previous = null;
         next = null;
-    let i = 0;
+    //let i = 0;
     while ( current !== null ){
         next = current.next; // temporarily store the next node
         current.next = previous; // reverse the current node
         previous = current; // move previous to the current node since we are done with that node 
         current = next; // move to the next node
-        i += 1;
+        //i += 1;
     }
     // previous is the last node processed in the original linkedlist and the head of the reversed linkedlist
     return previous;

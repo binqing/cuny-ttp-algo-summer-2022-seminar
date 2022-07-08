@@ -33,7 +33,7 @@ const traverse = function(root) {
       }
       currentLevel.push(current.value);
     }
-    result.unshift(currentLevel)
+    result.unshift(currentLevel);
   }
   //return result.reverse();
   return result

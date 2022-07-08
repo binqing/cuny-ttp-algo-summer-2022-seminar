@@ -58,33 +58,37 @@ const find_successor = function(root, key) {
         }
     }
     const queue = [root];
-    console.log("root: " + root.val)
+    //console.log("root: " + root.val)
 
     while (queue.length  > 0) {
         //const queueLength = queue.length // get the queue length before dequeueing
         //for (let i = 0; i < queueLength; i++) {
             const current_node  = queue[0]
-            console.log("current node: " + current_node.val)
+            //console.log("current node: " + current_node.val)
             let shiftedNode = queue.shift();
-            console.log("shiftedNode : " + shiftedNode.val)
-            console.log("current node after shifted node: " + current_node.val)
+            //shiftedNode and queue[0] are the same node
+            //console.log("shiftedNode : " + shiftedNode.val)
+            //console.log("current node after shifted node: " + current_node.val)
             
             if (current_node.left) {
                 let leftchild = current_node.left
-                console.log ("current node's left child " + leftchild.val)
-                console.log ("new length after adding leftchild " + queue.push(current_node.left))
+                //console.log ("current node's left child " + leftchild.val)
+            
+                //console.log ("new length after adding leftchild " + queue.push(current_node.left))
+                queue.push(current_node.left);
             }
             if(current_node.right) {
                 let rightchild = current_node.right
-                console.log ("current node's right child " + rightchild.val)
-                console.log (" new length after adding rightchild: " + queue.push(current_node.right))
+                //console.log ("current node's right child " + rightchild.val)
+                //console.log (" new length after adding rightchild: " + queue.push(current_node.right))
+                queue.push(current_node.right)
             }
             // check if the current node matches the key node given
             // If True, stop traversing, return the element at top of queue and this is the next node in the level order traversal.
             if (current_node.val === key) {
             //if (current_node === key) {
                 //console.log ("key: " + key);
-                console.log ("key: " + key);
+                //console.log ("key: " + key);
                 if (queue[0] === null) {
                     console.log ("queue[0] before breaking: no successor ");
                 } else {
@@ -98,6 +102,7 @@ const find_successor = function(root, key) {
         } else { 
             console.log( "queue[0] after while loop: " + queue[0].val);
         }
+        
         //let result = queue[0]
         return queue[0];
     };

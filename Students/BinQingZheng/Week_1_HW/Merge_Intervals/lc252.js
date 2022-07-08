@@ -21,7 +21,7 @@ class Interval {
     }
     
     //sort the intervals by start time of appointments
-    intervals.sort((a, b) => a. start - b.start);
+    intervals.sort((a, b) => a.start - b.start);
 
     let start = intervals[0].start,
       end =intervals[0].end;
@@ -45,7 +45,7 @@ class Interval {
     }
     
     //sort the intervals by start time of appointments
-    intervals.sort((a, b) => a. start - b.start);
+    intervals.sort((a, b) => a.start - b.start);
 
     let start = intervals[0].start,
       end =intervals[0].end;
