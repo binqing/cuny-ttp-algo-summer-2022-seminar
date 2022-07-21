@@ -12,8 +12,9 @@ const find_missing_number = function(nums){
             [nums[i], nums[j]] = [nums[j], nums[i]];            
         } else {
             i += 1
-        }
+        }        
     }
+
     missingNums = [];
     for (i =0; i < nums.length; i++){
         if (nums[i] !== i+1){
@@ -21,6 +22,7 @@ const find_missing_number = function(nums){
         }
     }
     return missingNums;
+    
 }
 
 console.log(find_missing_number([4, 0, 3, 1, 5,]));
